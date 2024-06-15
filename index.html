@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevJane Portfolio Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -63,14 +63,13 @@
     <section class="intro" id="home">
       <img src="img/profile-pic.jpg" alt="profile-pic" class="rounded-image" />
       <div class="inner-content">
-        <h1 class="section__title section__title--intro">
-          Hi, I am <span style="color: #fcdc94">Josie</span>
+        <h1 class="section__title section__title--intro">Hello,</h1>
+        <h1>
+          I am <span style="color: #fcdc94">Josie</span>
           <span style="color: #c8cfa0">Tran</span>
         </h1>
         <p class="section__subtitle section__subtitle--intro">
-          Welcome to the world of technology and innovation! From AI to
-          blockchain, we explore the latest trends shaping our digital future.
-          Join us on this journey of discovery!
+          I learn how to learn
         </p>
         <ul class="social-list">
           <li class="social-list__item">
@@ -88,6 +87,17 @@
             >
               <i
                 class="fa-brands fa-linkedin-in"
+                style="color: #000000; font-size: 30px"
+              ></i>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a
+              class="social-list__link"
+              href="https://www.youtube.com/@phucgia8894"
+            >
+              <i
+                class="fa-brands fa-youtube"
                 style="color: #000000; font-size: 30px"
               ></i>
             </a>
@@ -118,7 +128,6 @@
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <!-- / service -->
 
         <div class="service">
           <h3>Design</h3>
@@ -129,7 +138,6 @@
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <!-- / service -->
 
         <div class="service">
           <h3>Develop</h3>
@@ -140,11 +148,9 @@
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <!-- / service -->
       </div>
-      <!-- / services -->
 
-      <!-- <a href="#work" class="btn">My Work</a> -->
+      <a href="projects.html" class="btn-view-projects">View My Projects</a>
     </section>
 
     <!-- About me -->
@@ -167,7 +173,7 @@
 
           <h3>Education</h3>
           <div class="education-block">
-            <img src="img/sfu-logo.png" alt="school-logo" class="school-img" />
+            <img src="img/sfu-logo.png" alt="school-logo" class="logo school-img" />
             <div class="education-info">
               <h4>Bachelor of Science in Computer Science</h4>
               <p>Jan 2022 - Present</p>
@@ -182,84 +188,77 @@
     <!-- Experience-->
     <section class="exp" id="experience">
       <h2 class="section__title section__title--services">My experience</h2>
-      <div class="work">
-        <div class="service">
-          <h3>Work</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+      <div class="work__content">
+        <div class="work-block">
+            <div><h3>Work</h3></div>
+            <div class="work-block-info">
+                <div class="work-items">
+                    <img src="img/chicha.png" alt="shoppers-logo" class="logo chicha-img" />
+                    <div class="work-info">
+                    <h4>Barista</h4>
+                    <p>June 2024 - Present</p>
+                    </div>
+                </div>
+        
+                <div class="work-items">
+                    <img
+                    src="img/shoppers.png"
+                    alt="shoppers-logo"
+                    class="logo shoppers-img"
+                    />
+                    <div class="work-info">
+                    <h4>Front Store Ambassador</h4>
+                    <p>Feb 2022 - Present</p>
+                    </div>
+                </div>
+            </div>   
         </div>
 
-        <div class="work">
-          <h3>Volunteer</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+        <div class="work-block">
+            <h3>Organization</h3>
+            <div class="work-block-info">
+                <div class="work-items">
+                    <img src="img/sfu-wics.png" alt="wics-logo" class="logo wics-img" />
+                    <div class="work-info">
+                      <h4>Undergraduate Mentor</h4>
+                      <p>June 2024 - Present</p>
+                    </div>
+                  </div>
+          
+                  <div class="work-items">
+                    <img
+                      src="img/tutor.jpeg"
+                      alt="tutor-logo"
+                      class="logo tutor-img"
+                    />
+                    <div class="work-info">
+                      <h4>Peer Tutor</h4>
+                      <p>Feb 2022 - Present</p>
+                    </div>
+                  </div>
+      
+                  <div class="work-items">
+                      <img src="img/su.jpeg" alt="su-logo" class="logo su-img" />
+                      <div class="work-info">
+                        <h4>Head of Social Media</h4>
+                        <p>June 2024 - Present</p>
+                      </div>
+                    </div>
+            
+                    <div class="work-items">
+                      <img
+                        src="img/icc.jpg"
+                        alt="icc-logo"
+                        class="logo icc-img"
+                      />
+                      <div class="work-info">
+                        <h4>Social Media Designer</h4>
+                        <p>Feb 2022 - Present</p>
+                      </div>
+                    </div>
+            </div>    
         </div>
-      </div>
-    </section>
-
-    <!-- My Work -->
-    <section class="my-work" id="projects">
-      <h2 class="section__title">What I've done</h2>
-      <p class="section__subtitle"></p>
-
-      <div class="portfolio">
-        <!-- Portfolio item 01 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-01.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 02 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-02.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 03 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-03.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 04 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-04.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 05 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-05.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 06 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-06.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 07 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-07.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 08 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-08.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 09 -->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-09.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 0 0-->
-        <a href="#" class="portfolio__item">
-          <img src="img/portfolio-10.jpg" alt="" class="portfolio__img" />
-        </a>
+        
       </div>
     </section>
   </body>
