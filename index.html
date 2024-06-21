@@ -3,8 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevJane Portfolio Website</title>
+    <title>Josie Tran Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="icon"
+      href="/img/favicon_io/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon_io/apple-touch-icon.png"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -27,6 +37,7 @@
       src="https://kit.fontawesome.com/55fe8c2835.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -190,38 +201,38 @@
       <h2 class="section__title">My experience</h2>
       <div class="job-carousel">
         <div class="job-carousel-item active">
-            <div class="job-header">
-              <h2>Work experience</h2>
-              <p>2022 - Present</p>
+          <div class="job-header">
+            <h2>Work experience</h2>
+            <p>2022 - Present</p>
+          </div>
+          <div class="job-cards">
+            <div class="job-card">
+              <img
+                src="img/chicha.png"
+                alt="chicha-logo"
+                class="logo chicha-img"
+              />
+              <h3>Barista</h3>
+              <p>ChiCha SanChen</p>
+              <p>Jun 2024 - Present</p>
+              <p>BC, Canada</p>
+              <p>Permanent Part-Time</p>
+              <button>View Details</button>
             </div>
-            <div class="job-cards">
-              <div class="job-card">
-                <img
-                  src="img/chicha.png"
-                  alt="chicha-logo"
-                  class="logo chicha-img"
-                />
-                <h3>Barista</h3>
-                <p>ChiCha SanChen</p>
-                <p>Jun 2024 - Present</p>
-                <p>BC, Canada</p>
-                <p>Permanent Part-Time</p>
-                <button>View Details</button>
-              </div>
-              <div class="job-card">
-                <img
-                  src="img/shoppers.png"
-                  alt="shoppers-logo"
-                  class="logo shoppers-img"
-                />
-                <h3>Front Store Ambassador</h3>
-                <p>Shoppers Drug Mart</p>
-                <p>Feb 2022 - Present</p>
-                <p>BC, Canada</p>
-                <p>Permanent Part-Time</p>
-                <button>View Details</button>
-              </div>
+            <div class="job-card">
+              <img
+                src="img/shoppers.png"
+                alt="shoppers-logo"
+                class="logo shoppers-img"
+              />
+              <h3>Front Store Ambassador</h3>
+              <p>Shoppers Drug Mart</p>
+              <p>Feb 2022 - Present</p>
+              <p>BC, Canada</p>
+              <p>Permanent Part-Time</p>
+              <button>View Details</button>
             </div>
+          </div>
         </div>
 
         <div class="job-carousel-item active">
@@ -271,9 +282,8 @@
               <button>View Details</button>
             </div>
           </div>
-        </div>    
+        </div>
       </div>
     </section>
-
   </body>
 </html>
