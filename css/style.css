@@ -261,13 +261,18 @@ header {
   margin: 0;
   padding: 0;
 }
+.school-img {
+  width: 50px;
+  height: auto;
+}
 .logo {
-  width: 180px;
+  width: 35px;
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 50%;
+  border-radius: 20%;
+  margin-bottom: 10px;
 }
-.logo:hover{
+.logo:hover {
   transition: transform 0.3s ease-in-out;
   transform: scale(1.1);
   cursor: pointer;
@@ -275,39 +280,83 @@ header {
 }
 
 /* My experience */
-.exp {
-  height: 100vh;
+.job-carousel {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
 }
-.work__content {
-  display: flex;
-  justify-content: space-evenly;
-  height: 100%;
-  /* border: 1px black solid; */
+
+.job-carousel-item {
+  background: var(--color-green);
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-/* .work-block {
+
+.job-carousel-item.active {
+  padding-bottom: 40px;
+}
+
+.job-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.job-header h2 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.job-cards {
   display: flex;
-  flex: 1 1 45%;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.job-card {
+  flex: 0 0 250px;
+  background: var(--color-light);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
   flex-direction: column;
-  gap: 50px;
-  justify-content: space-evenly;
-  border: 1px red solid;
-  justify-items: center;
-  justify-content: center;  
-  align-items: center;
-} */
-.work-info h4,
-.work-info p {
-  margin: 0;
-  padding: 0;
-  display: none;
+  justify-content: space-between;
 }
-.work-block-info {
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
-  gap: 50px;
+
+.job-card h3 {
+  margin-bottom: 10px;
+  font-size: 1em;
 }
-.work-block{
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+
+.job-card p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.job-card button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--color-light);
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: var(--fs-h1);
+  border: 2px solid var(--color-green);
+}
+
+.job-card button:hover {
+  background: var(--color-green);
+}
+
+@media (max-width: 768px) {
+  .job-cards {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
