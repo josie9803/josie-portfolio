@@ -14,6 +14,7 @@
   --color-dark: #303030;
   --color-yellow: #fcdc94;
   --color-green: #c8cfa0;
+  --color-dark-green: #808836;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -22,6 +23,8 @@
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+
+  --swiper-navigation-color: #e49a38;
 }
 
 @media (min-width: 800px) {
@@ -293,6 +296,7 @@ header {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .job-carousel-item.active {
@@ -359,4 +363,41 @@ header {
     flex-direction: column;
     gap: 10px;
   }
+}
+
+/* for swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 40px !important;
+  right: 30px !important;
+}
+.swiper-button-prev {
+  left: 61.5rem !important;
+}
+
+/* Optional: Add custom icons for the buttons */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: '';
+  display: none;
+  background-size: cover;
+}
+
+.swiper-button-next i,
+.swiper-button-prev i {
+  size: 500px;
+}
+/* .swiper-wrapper {
+  padding: 20px;
+} */
+.mySwiper {
+  /* didnot work!!!!!!!!!!! */
+  /* padding: 50px; */
+  box-sizing: border-box;
 }

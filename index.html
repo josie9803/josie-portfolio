@@ -33,11 +33,14 @@
       href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script
       src="https://kit.fontawesome.com/55fe8c2835.js"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
   </head>
   <body>
     <header>
@@ -203,87 +206,132 @@
         <div class="job-carousel-item active">
           <div class="job-header">
             <h2>Work experience</h2>
-            <p>2022 - Present</p>
+            <p>2.5+ years (2022 - Present)</p>
           </div>
           <div class="job-cards">
-            <div class="job-card">
-              <img
-                src="img/chicha.png"
-                alt="chicha-logo"
-                class="logo chicha-img"
-              />
-              <h3>Barista</h3>
-              <p>ChiCha SanChen</p>
-              <p>Jun 2024 - Present</p>
-              <p>BC, Canada</p>
-              <p>Permanent Part-Time</p>
-              <button>View Details</button>
-            </div>
-            <div class="job-card">
-              <img
-                src="img/shoppers.png"
-                alt="shoppers-logo"
-                class="logo shoppers-img"
-              />
-              <h3>Front Store Ambassador</h3>
-              <p>Shoppers Drug Mart</p>
-              <p>Feb 2022 - Present</p>
-              <p>BC, Canada</p>
-              <p>Permanent Part-Time</p>
-              <button>View Details</button>
-            </div>
+            <!-- <div class="swiper-wrapper"> -->
+              <div class="job-card swiper-slide">
+                <img
+                  src="img/chicha.png"
+                  alt="chicha-logo"
+                  class="logo chicha-img"
+                />
+                <h3>Sales Associate/Barista</h3>
+                <p>ChiCha SanChen</p>
+                <p>Jun 2024 - Present</p>
+                <p>BC, Canada</p>
+                <p>Permanent Part-Time</p>
+                <button>View Details</button>
+              </div>
+              <div class="job-card swiper-slide">
+                <img
+                  src="img/shoppers.png"
+                  alt="shoppers-logo"
+                  class="logo shoppers-img"
+                />
+                <h3>Front Store Ambassador</h3>
+                <p>Shoppers Drug Mart</p>
+                <p>Feb 2022 - Present</p>
+                <p>BC, Canada</p>
+                <p>Permanent Part-Time</p>
+                <button>View Details</button>
+              </div>
+            <!-- </div> -->
           </div>
         </div>
 
         <div class="job-carousel-item active">
           <div class="job-header">
             <h2>Organization experience</h2>
-            <p>2018 - Present</p>
-          </div>
-          <div class="job-cards">
-            <div class="job-card">
-              <img
-                src="img/sfu-wics.png"
-                alt="wics-logo"
-                class="logo wics-img"
-              />
-              <h3>Undergraduate Mentor</h3>
-              <p>SFU Women in CS</p>
-              <p>Sep 2023 - Apr 2023</p>
-              <p>Volunteer</p>
-              <button>View Details</button>
+            <p>6 years (2018 - Present)</p>
+            <div class="swiper-button-next">
+              <i
+                class="fa-solid fa-circle-arrow-right fa-2xl"
+                style="color: black"
+              ></i>
             </div>
-            <div class="job-card">
-              <img
-                src="img/tutor.jpeg"
-                alt="tutor-logo"
-                class="logo tutor-img"
-              />
-              <h3>Peer Tutor</h3>
-              <p>SFU Faculty of Applied Science</p>
-              <p>May 2023 - Aug 2023</p>
-              <p>Volunteer</p>
-              <button>View Details</button>
-            </div>
-            <div class="job-card">
-              <img src="img/su.jpeg" alt="su-logo" class="logo su-img" />
-              <h3>Head of Social Media</h3>
-              <p>Bui Thi Xuan Photography & Graphics Club</p>
-              <p>Sep 2018 - May 2021</p>
-              <p>Leadership</p>
-              <button>View Details</button>
-            </div>
-            <div class="job-card">
-              <img src="img/icc.jpg" alt="icc-logo" class="logo icc-img" />
-              <h3>Social Media Designer</h3>
-              <p>Bui Thi Xuan International Culture Club</p>
-              <p>Feb 2020 - May 2021</p>
-              <p>Leadership</p>
-              <button>View Details</button>
+            <div class="swiper-button-prev">
+              <i
+                class="fa-solid fa-circle-arrow-left fa-2xl"
+                style="color: black"
+              ></i>
             </div>
           </div>
+          <div class="job-cards swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="job-card swiper-slide">
+                <img
+                  src="img/sfu-wics.png"
+                  alt="wics-logo"
+                  class="logo wics-img"
+                />
+                <h3>Undergraduate Mentor</h3>
+                <p>SFU Women in CS</p>
+                <p>Sep 2023 - Apr 2024</p>
+                <p>Hybrid</p>
+                <p>Volunteer</p>
+                <button>View Details</button>
+              </div>
+              <div class="job-card swiper-slide">
+                <img
+                  src="img/tutor.jpeg"
+                  alt="tutor-logo"
+                  class="logo tutor-img"
+                />
+                <h3>Peer Tutor</h3>
+                <p>SFU Faculty of Applied Science</p>
+                <p>May 2023 - Aug 2023</p>
+                <p>On-site</p>
+                <p>Volunteer</p>
+                <button>View Details</button>
+              </div>
+              <div class="job-card swiper-slide">
+                <img src="img/su.jpeg" alt="su-logo" class="logo su-img" />
+                <h3>Head of Media</h3>
+                <p>Photography & Graphics Club</p>
+                <p>Sep 2018 - May 2021</p>
+                <p>Hybrid</p>
+                <p>Leadership, Professional</p>
+                <button>View Details</button>
+              </div>
+              <div class="job-card swiper-slide">
+                <img src="img/icc.jpg" alt="icc-logo" class="logo icc-img" />
+                <h3>Media Designer</h3>
+                <p>International Culture Club</p>
+                <p>Feb 2020 - May 2021</p>
+                <p>Hybrid</p>
+                <p>Professional</p>
+                <button>View Details</button>
+              </div>
+              <div class="job-card swiper-slide">
+                <img src="img/xplus.png" alt="xplus" class="logo xplus-img" />
+                <h3>ER/HR</h3>
+                <p>Xhibition+</p>
+                <p>Mar 2020 - Feb 2021</p>
+                <p>Remote</p>
+                <p>Community</p>
+                <button>View Details</button>
+              </div>
+            </div>
+            <!-- <div class="swiper-button-next">
+              <i
+                class="fa-solid fa-circle-arrow-right fa-2xl"
+                style="color: #ffd43b"
+              ></i>
+            </div>
+            <div class="swiper-button-prev">
+              <i
+                class="fa-solid fa-circle-arrow-left fa-2xl"
+                style="color: #ffd43b"
+              ></i>
+            </div> -->
+          </div>
+          
         </div>
       </div>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./javascript/script.js"></script>
   </body>
 </html>
