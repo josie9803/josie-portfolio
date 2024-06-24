@@ -380,8 +380,6 @@ header {
 .swiper-button-prev {
   left: 61.5rem !important;
 }
-
-/* Optional: Add custom icons for the buttons */
 .swiper-button-next::after,
 .swiper-button-prev::after {
   content: '';
@@ -393,11 +391,6 @@ header {
 .swiper-button-prev i {
   size: 500px;
 }
-/* .swiper-wrapper {
-  padding: 20px;
-} */
 .mySwiper {
-  /* didnot work!!!!!!!!!!! */
-  /* padding: 50px; */
   box-sizing: border-box;
 }
