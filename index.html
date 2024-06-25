@@ -77,7 +77,7 @@
     <section class="intro" id="home">
       <img src="img/profile-pic.jpg" alt="profile-pic" class="rounded-image" />
       <div class="inner-content">
-        <h1 class="section__title section__title--intro" id="greetings"/>
+        <h1 class="section__title section__title--intro" id="greetings" />
         <h1>
           I am <span style="color: #fcdc94">Josie</span>
           <span style="color: #c8cfa0">Tran</span>
@@ -221,7 +221,7 @@
               <p>Jun 2024 - Present</p>
               <p>BC, Canada</p>
               <p>Permanent Part-Time</p>
-              <button>View Details</button>
+              <button data-modal="modal-chicha">View Details</button>
             </div>
             <div class="job-card swiper-slide">
               <img
@@ -234,7 +234,7 @@
               <p>Feb 2022 - Present</p>
               <p>BC, Canada</p>
               <p>Permanent Part-Time</p>
-              <button>View Details</button>
+              <button data-modal="modal-shoppers">View Details</button>
             </div>
             <!-- </div> -->
           </div>
@@ -270,7 +270,9 @@
                 <p>Sep 2023 - Apr 2024</p>
                 <p>Hybrid</p>
                 <p>Volunteer</p>
-                <button class="view-details-btn">View Details</button>
+                <button data-modal="modal-wics">
+                  View Details
+                </button>
               </div>
               <div class="job-card swiper-slide">
                 <img
@@ -283,7 +285,7 @@
                 <p>May 2023 - Aug 2023</p>
                 <p>On-site</p>
                 <p>Volunteer</p>
-                <button>View Details</button>
+                <button data-modal="modal-tutor">View Details</button>
               </div>
               <div class="job-card swiper-slide">
                 <img src="img/su.jpeg" alt="su-logo" class="logo su-img" />
@@ -292,7 +294,7 @@
                 <p>Sep 2018 - May 2021</p>
                 <p>Hybrid</p>
                 <p>Leadership, Professional</p>
-                <button>View Details</button>
+                <button data-modal="modal-su">View Details</button>
               </div>
               <div class="job-card swiper-slide">
                 <img src="img/icc.jpg" alt="icc-logo" class="logo icc-img" />
@@ -301,7 +303,7 @@
                 <p>Feb 2020 - May 2021</p>
                 <p>Hybrid</p>
                 <p>Professional</p>
-                <button>View Details</button>
+                <button data-modal="modal-icc">View Details</button>
               </div>
               <div class="job-card swiper-slide">
                 <img src="img/xplus.png" alt="xplus" class="logo xplus-img" />
@@ -310,7 +312,7 @@
                 <p>Mar 2020 - Feb 2021</p>
                 <p>Remote</p>
                 <p>Community</p>
-                <button>View Details</button>
+                <button data-modal="modal-xplus">View Details</button>
               </div>
             </div>
           </div>
@@ -318,10 +320,100 @@
       </div>
     </section>
 
+    <!-- Modal windows -->
+
+    <div class="modal-container" id="modal-chicha">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-button" data-close="modal-chicha">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
+          </span>
+          <h1>Sales Associate/ Barista</h1>
+          <p class="date">Duration: 8 months (Sep 2023 - Apr 2024)</p>
+          <p>Top skills gained:</p>
+        </div>
+        <div class="modal-main-content">
+          <h2>My role</h2>
+          <ul>
+            <li>
+              Collaborated with another co-mentor to help 2 first-year CS
+              students adapt to university life.
+            </li>
+          </ul>
+
+          <h2>About the mentorship program</h2>
+          <a
+            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
+            class="program-link"
+            >Program Website</a
+          >
+          <p>
+            "Undergrad mentees will be grouped with 2-3 fellow mentees and
+            guided by 2 mentors. For grad mentees, you will be paired up 1:1
+            with a mentor. You will get the chance to receive academic/career
+            guidance, tips about SFU, and meet other students! The program will
+            spread across the Fall 2023 and Spring 2024 semesters. The program
+            is hybrid and runs for 2 semesters starting from the Fall term and
+            ending in the Spring term."
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a class="overview-button">Overview</a>
+          <a class="team-button" style="color: #808836">
+            What my colleague say about me
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modal-shoppers">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-button" data-close="modal-shoppers">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
+          </span>
+          <h1>Front Store Ambassador</h1>
+          <p class="date">Duration: 8 months (Sep 2023 - Apr 2024)</p>
+          <p>Top skills gained:</p>
+        </div>
+        <div class="modal-main-content">
+          <h2>My role</h2>
+          <ul>
+            <li>
+              Collaborated with another co-mentor to help 2 first-year CS
+              students adapt to university life.
+            </li>
+          </ul>
+
+          <h2>About the mentorship program</h2>
+          <a
+            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
+            class="program-link"
+            >Program Website</a
+          >
+          <p>
+            "Undergrad mentees will be grouped with 2-3 fellow mentees and
+            guided by 2 mentors. For grad mentees, you will be paired up 1:1
+            with a mentor. You will get the chance to receive academic/career
+            guidance, tips about SFU, and meet other students! The program will
+            spread across the Fall 2023 and Spring 2024 semesters. The program
+            is hybrid and runs for 2 semesters starting from the Fall term and
+            ending in the Spring term."
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a class="overview-button">Overview</a>
+          <a class="team-button" style="color: #808836">
+            What my colleague say about me
+          </a>
+        </div>
+      </div>
+    </div>
+
     <div class="modal-container" id="modal-wics">
       <div class="modal-content">
         <div class="modal-header">
-          <span class="close-button">
+          <span class="close-button" data-close="modal-wics">
             <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
           </span>
           <h1>Undergraduate Mentor</h1>
@@ -361,6 +453,183 @@
         </div>
       </div>
     </div>
+
+    <div class="modal-container" id="modal-tutor">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-button" data-close="modal-tutor">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
+          </span>
+          <h1>Peer Tutor</h1>
+          <p class="date">Duration: 8 months (Sep 2023 - Apr 2024)</p>
+          <p>Top skills gained:</p>
+        </div>
+        <div class="modal-main-content">
+          <h2>My role</h2>
+          <ul>
+            <li>
+              Collaborated with another co-mentor to help 2 first-year CS
+              students adapt to university life.
+            </li>
+          </ul>
+
+          <h2>About the mentorship program</h2>
+          <a
+            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
+            class="program-link"
+            >Program Website</a
+          >
+          <p>
+            "Undergrad mentees will be grouped with 2-3 fellow mentees and
+            guided by 2 mentors. For grad mentees, you will be paired up 1:1
+            with a mentor. You will get the chance to receive academic/career
+            guidance, tips about SFU, and meet other students! The program will
+            spread across the Fall 2023 and Spring 2024 semesters. The program
+            is hybrid and runs for 2 semesters starting from the Fall term and
+            ending in the Spring term."
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a class="overview-button">Overview</a>
+          <a class="team-button" style="color: #808836">
+            What my colleague say about me
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modal-su">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-button" data-close="modal-su">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
+          </span>
+          <h1>Head of Media</h1>
+          <p class="date">Duration: 8 months (Sep 2023 - Apr 2024)</p>
+          <p>Top skills gained:</p>
+        </div>
+        <div class="modal-main-content">
+          <h2>My role</h2>
+          <ul>
+            <li>
+              Collaborated with another co-mentor to help 2 first-year CS
+              students adapt to university life.
+            </li>
+          </ul>
+
+          <h2>About the mentorship program</h2>
+          <a
+            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
+            class="program-link"
+            >Program Website</a
+          >
+          <p>
+            "Undergrad mentees will be grouped with 2-3 fellow mentees and
+            guided by 2 mentors. For grad mentees, you will be paired up 1:1
+            with a mentor. You will get the chance to receive academic/career
+            guidance, tips about SFU, and meet other students! The program will
+            spread across the Fall 2023 and Spring 2024 semesters. The program
+            is hybrid and runs for 2 semesters starting from the Fall term and
+            ending in the Spring term."
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a class="overview-button">Overview</a>
+          <a class="team-button" style="color: #808836">
+            What my colleague say about me
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modal-icc">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-button" data-close="modal-icc">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
+          </span>
+          <h1>Media Designer</h1>
+          <p class="date">Duration: 8 months (Sep 2023 - Apr 2024)</p>
+          <p>Top skills gained:</p>
+        </div>
+        <div class="modal-main-content">
+          <h2>My role</h2>
+          <ul>
+            <li>
+              Collaborated with another co-mentor to help 2 first-year CS
+              students adapt to university life.
+            </li>
+          </ul>
+
+          <h2>About the mentorship program</h2>
+          <a
+            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
+            class="program-link"
+            >Program Website</a
+          >
+          <p>
+            "Undergrad mentees will be grouped with 2-3 fellow mentees and
+            guided by 2 mentors. For grad mentees, you will be paired up 1:1
+            with a mentor. You will get the chance to receive academic/career
+            guidance, tips about SFU, and meet other students! The program will
+            spread across the Fall 2023 and Spring 2024 semesters. The program
+            is hybrid and runs for 2 semesters starting from the Fall term and
+            ending in the Spring term."
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a class="overview-button">Overview</a>
+          <a class="team-button" style="color: #808836">
+            What my colleague say about me
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-container" id="modal-xplus">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close-button" data-close="modal-xplus">
+            <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
+          </span>
+          <h1>ER/HR</h1>
+          <p class="date">Duration: 8 months (Sep 2023 - Apr 2024)</p>
+          <p>Top skills gained:</p>
+        </div>
+        <div class="modal-main-content">
+          <h2>My role</h2>
+          <ul>
+            <li>
+              Collaborated with another co-mentor to help 2 first-year CS
+              students adapt to university life.
+            </li>
+          </ul>
+
+          <h2>About the mentorship program</h2>
+          <a
+            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
+            class="program-link"
+            >Program Website</a
+          >
+          <p>
+            "Undergrad mentees will be grouped with 2-3 fellow mentees and
+            guided by 2 mentors. For grad mentees, you will be paired up 1:1
+            with a mentor. You will get the chance to receive academic/career
+            guidance, tips about SFU, and meet other students! The program will
+            spread across the Fall 2023 and Spring 2024 semesters. The program
+            is hybrid and runs for 2 semesters starting from the Fall term and
+            ending in the Spring term."
+          </p>
+        </div>
+        <div class="modal-footer">
+          <a class="overview-button">Overview</a>
+          <a class="team-button" style="color: #808836">
+            What my colleague say about me
+          </a>
+        </div>
+      </div>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./javascript/script.js"></script>

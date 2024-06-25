@@ -1,3 +1,4 @@
+//for swiperjs
 let slideChangeCount = 0;
 const swiper = new Swiper('.mySwiper', {
   slidesperview: 4,
@@ -27,30 +28,34 @@ if (swiper.isEnd) {
   nextButton.classList.add('disabled');
   nextButton.disabled = true;
 }
+
 // for modal boxes
-var modal_wics = document.getElementById("modal-wics");
-var btn_wics = document.querySelector(".view-details-btn");
-var closeButton = document.querySelector(".close-button");
-
-btn_wics.onclick = function() {
-  modal_wics.style.display = "block";
-  document.body.classList.add("modal-open"); 
-}
-
-closeButton.onclick = function() {
-  modal_wics.style.display = "none";
-  document.body.classList.remove("modal-open");
-}
-
-window.onclick = function(event) {
-  if (event.target == modal_wics) {
-    modal_wics.style.display = "none";
-    document.body.classList.remove("modal-open"); 
+document.body.addEventListener('click', function(event) {
+  if (event.target.matches('[data-modal]')) {
+    const modalId = event.target.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'block';
+    }
   }
-}
+
+  if (event.target.matches('.close-button, .close-button *')) {
+    const closeButton = event.target.closest('.close-button');
+    const modalId = closeButton.getAttribute('data-close');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target.matches('.modal-container')) {
+    event.target.style.display = 'none';
+  }
+});
 
 //for switching text
-
   const messages = ["Hello 🇨🇦,", "哈囉 🇭🇰,", "您好 🇨🇳,", "Xin chào 🇻🇳,"];
   let index = 0;
 
