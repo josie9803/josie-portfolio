@@ -329,7 +329,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* transition: transform 0.3s ease; */
 }
+
+/* .job-card:hover {
+  transform: scale(1.05);
+} */
 
 .job-card h3 {
   margin-bottom: 10px;
@@ -393,4 +398,86 @@ header {
 }
 .mySwiper {
   box-sizing: border-box;
+}
+
+/* for modal boxes */
+.modal-container {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 900px;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal-header {
+  justify-content: space-between;
+}
+.modal-header h1 {
+  margin-bottom: 10px;
+}
+.modal-content h2 {
+  font-size: var(--fs-h3);
+}
+
+.modal-header p {
+  margin: 5px 0;
+  color: #555;
+}
+.modal-header::after,
+.modal-footer::before {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--color-dark);
+  opacity: 0.25;
+}
+/* .modal-footer {
+  display: flex;
+} */
+.close-button {
+  margin-left: -1%;
+  border-radius: 50%;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+.close-button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 98, 81, 0.2);
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+.program-link {
+  font-weight: var(--fw-bold);
+  color: var(--color-dark-green);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.program-link:hover {
+  color: #ffca28; /* Change color on hover */
 }
