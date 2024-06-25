@@ -49,3 +49,24 @@ window.onclick = function(event) {
   }
 }
 
+//for switching text
+
+  const messages = ["Hello 🇨🇦,", "哈囉 🇭🇰,", "您好 🇨🇳,", "Xin chào 🇻🇳,"];
+  let index = 0;
+
+  const titleElement = document.getElementById('greetings');
+  titleElement.textContent = messages[index++];
+  setInterval(switchText, 3000);
+  function switchText() { 
+    titleElement.style.opacity = 0;
+    setTimeout(() => {
+      titleElement.textContent = messages[index];
+      index = (index + 1) % messages.length; 
+      titleElement.style.opacity = 1;
+    }, 700);
+  }
+
+
+
+    
+

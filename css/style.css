@@ -138,10 +138,20 @@ header {
   margin: 0;
   font-size: var(--fs-h3);
 }
+.section__title--intro {
+  transition: opacity 0.5s ease-in-out;
+  /* opacity: 0;
+  animation: fadeIn 2s forwards; */
+}
 
 .section__subtitle--intro {
   font-family: var(--ff-secondary);
   margin-bottom: 1em;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* Home Intro */
