@@ -66,6 +66,7 @@ h2 {
 h3 {
   font-size: var(--fs-h3);
 }
+
 /* Nav bar */
 header {
   display: flex;
@@ -204,7 +205,8 @@ header {
   background-size: cover;
   color: var(--color-dark);
   text-align: center;
-  height: 100vh;
+  margin-top: 30px;
+  /* height: 100vh; */
 }
 .section__title--services::after {
   content: '';
@@ -489,5 +491,68 @@ body.modal-open {
 }
 
 .program-link:hover {
-  color: #ffca28; 
+  color: #ffca28;
+}
+
+/* summary */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  background-color: #4a3522;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* text-align: center; */
+}
+
+.grid-item.item1 {
+  grid-column: span 4;
+  grid-row: span 3;
+  /* background-color: #f5d94d; */
+  background-color: var(--color-yellow);
+  color: #3a2718;
+  /* font-weight: bold; */
+  /* font-size: 2rem; */
+}
+
+.grid-item.item2 {
+  grid-column: span 2;
+  grid-row: span 4;
+  background-color: #4a3522;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.grid-item.item3 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #4a3522;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.grid-item.item3 img, .grid-item.item2 img{
+  border-radius: 10px;
+}
+
+.grid-item.item4 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #4a3522;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.grid-item.item5 {
+  grid-column: span 2;
+  grid-row: span 1;
+  background-color: #4a3522;
+  color: #fff;
+  font-size: 1.2rem;
 }
