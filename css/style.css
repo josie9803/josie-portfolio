@@ -249,6 +249,7 @@ header {
   font-weight: var(--fw-bold);
   transition: transform 200ms ease-in-out;
   margin-top: 2em;
+  /* border-radius: 5px; */
 }
 .btn-view-projects:hover {
   transform: scale(1.2);
@@ -334,12 +335,15 @@ header {
 
 .job-cards {
   display: flex;
-  gap: 20px;
+  /* gap: 20px; */
+  justify-content: space-between;
+  margin-left: 0;
   overflow-x: auto;
+  /* width: 100%; */
 }
 
 .job-card {
-  flex: 0 0 250px;
+  /* flex: 0 0 250px; */
   background: var(--color-light);
   padding: 20px;
   border-radius: 10px;
@@ -347,6 +351,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   /* transition: transform 0.3s ease; */
 }
 
@@ -409,14 +414,19 @@ header {
   display: none;
   background-size: cover;
 }
-
-.swiper-button-next i,
-.swiper-button-prev i {
-  size: 500px;
-}
 .mySwiper {
+  width: 100%;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: calc((100% - 60px) / 4);
   box-sizing: border-box;
 }
+/* .swiper-button-next.disabled,
+.swiper-button-prev.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+} */
 
 /* for modal boxes */
 .modal-container {
@@ -463,6 +473,18 @@ header {
   margin: 5px 0;
   color: #555;
 }
+/* apply display flex will affect ::before, need to use another div wrap */
+.footer-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 100px;
+}
+/* .overview-button:hover,
+.company-button:hover {
+  text-decoration: underline;
+} */
 .modal-header::after,
 .modal-footer::before {
   content: '';
@@ -472,9 +494,38 @@ header {
   background: var(--color-dark);
   opacity: 0.25;
 }
-/* .modal-footer {
-  display: flex;
-} */
+.modal-main-content {
+  display: none;
+}
+.modal-content h2 {
+  letter-spacing: 0.7px;
+}
+.footer-content a {
+  position: relative;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: text-shadow 0.3s ease;
+}
+.footer-content a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--link-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-content a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.active {
+  display: block;
+}
 .close-button {
   margin-left: -1%;
   border-radius: 50%;
@@ -506,26 +557,32 @@ body.modal-open {
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   /* padding: 20px; */
-  max-width: 1000px;
+  /* max-width: 1000px; */
+  max-width: 70vw;
   margin: 0 auto;
+  /* background-color: #303030; */
+  height: 100vh;
 }
 
 .grid-item {
   /* background-color: #4a3522; */
   border-radius: 10px;
-  max-height: 500px;
   box-sizing: border-box;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
   /* text-align: center; */
 }
 
 .grid-item.item1 {
-  padding: 30px;
+  padding: 35px;
   grid-column: span 4;
   grid-row: span 1;
   background-color: var(--color-yellow);
   color: #3a2718;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* font-size: 1.3rem; */
 }
 
 .grid-item.item2 {
@@ -557,9 +614,8 @@ body.modal-open {
   grid-row: span 1;
   background-color: none;
   color: black;
-  max-height: 50px;
+  max-height: 80px;
   text-align: center;
-  /* font-size: 1.2rem; */
 }
 .grid-item.item4::after {
   content: '';

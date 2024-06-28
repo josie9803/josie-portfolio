@@ -129,23 +129,34 @@
     <section class="about" id="about-me">
       <div class="grid-container">
         <div class="grid-item item1">
-          <h3>Education</h3>
-          <p>
-            <strong>Simon Fraser University: </strong> major in Computing
-            Science
-          </p>
-          <p>
-            <strong>Activities: </strong>
-            <span style="text-decoration: underline"
-              >SLC Photovoice project, Surge Projects, ChaosHack 2024, </span
-            >CS Peer Tutor, WiCS Mentor
-          </p>
-          <p>
-            <strong>Favourite courses:</strong> Formal Methods, Object Oriented
-            Design, User Interface Design, Discrete Mathematics, Systems
-            Programming
-          </p>
+          <div>
+            <h3 style="font-size: 2rem">Education</h3>
+          </div>
+          <div>
+            <div style="font-size: 1.2rem">
+              <p>
+                <strong>Simon Fraser University: </strong> major in Computing
+                Science
+              </p>
+            </div>
+            <div style="font-size: 1rem">
+              <p>
+                <strong>Activities: </strong>
+                <span style="text-decoration: underline"
+                  >SLC Photovoice project, Surge Projects, ChaosHack 2024, </span
+                >CS Peer Tutor, WiCS Mentor
+              </p>
+            </div>
+            <div style="font-size: 1rem">
+              <p>
+                <strong>Favourite courses:</strong> Formal Methods, Object
+                Oriented Design, User Interface Design, Discrete Mathematics,
+                Systems Programming
+              </p>
+            </div>
+          </div>
         </div>
+
         <div class="grid-item item2">
           <img src="./img/me.jpg" alt="Profile" />
         </div>
@@ -156,7 +167,7 @@
           <h2 class="section__title">About me</h2>
         </div>
         <div class="grid-item item5">
-          <h3>Interests</h3>
+          <h3 style="font-size: 2rem">Interests</h3>
           <p>Human-Computer Interaction</p>
           <p>AI Integration</p>
           <p>Brand Identity</p>
@@ -216,8 +227,8 @@
             <h2>Work experience</h2>
             <p>2.5+ years (2022 - Present)</p>
           </div>
-          <div class="job-cards">
-            <!-- <div class="swiper-wrapper"> -->
+          <div class="job-cards swiper mySwiper">
+            <div class="swiper-wrapper">
             <div class="job-card swiper-slide">
               <img
                 src="img/chicha.png"
@@ -244,7 +255,7 @@
               <p>Permanent Part-Time</p>
               <button data-modal="modal-shoppers">View Details</button>
             </div>
-            <!-- </div> -->
+            </div>
           </div>
         </div>
 
@@ -335,39 +346,59 @@
             <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
           </span>
           <h1>Sales Associate/ Barista</h1>
-          <p class="date">Duration: 8 months (Sep 2023 - Apr 2024)</p>
-          <p>Top skills gained:</p>
+          <p class="date">Started Jun 2024</p>
+          <p>Status: In training</p>
         </div>
-        <div class="modal-main-content">
-          <h2>My role</h2>
+        <div class="modal-main-content" id="chicha-overview-content">
+          <h2><span style="color: #808836">High</span>lights</h2>
           <ul>
+            <li>Technology used: POS System</li>
             <li>
-              Collaborated with another co-mentor to help 2 first-year CS
-              students adapt to university life.
+              Top skills gained: Multi-tasking, Accuracy, Intercultural
+              Communication
             </li>
           </ul>
-
-          <h2>About the mentorship program</h2>
-          <a
-            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
-            class="program-link"
-            >Program Website</a
-          >
+          <h2><span style="color: #808836">My </span>responsibilities</h2>
+          <ul>
+            <li>Prepare quality drinks by strictly following recipes</li>
+            <li>
+              Introduce and recommend the science of different kinds of tea to
+              customers
+            </li>
+            <li>Maintain a well clean working environment at all times</li>
+          </ul>
+        </div>
+        <div class="modal-main-content" id="chicha-company-content">
+          <h2>About the Company</h2>
           <p>
-            "Undergrad mentees will be grouped with 2-3 fellow mentees and
-            guided by 2 mentors. For grad mentees, you will be paired up 1:1
-            with a mentor. You will get the chance to receive academic/career
-            guidance, tips about SFU, and meet other students! The program will
-            spread across the Fall 2023 and Spring 2024 semesters. The program
-            is hybrid and runs for 2 semesters starting from the Fall term and
-            ending in the Spring term."
+            "Chicha San Chen 吃茶三千 is a Taiwanese-based premium bubble tea
+            shop. Originating from Taiwan, CHICHA San Chen (吃茶三千) was
+            founded in 1998 with a mission to make high-quality, freshly brewed
+            teas accessible to discerning tea drinkers. Beverages are
+            handcrafted by Taiwanese tea masters with over 20 years of
+            experience, including having its own tea mountain, professional tea
+            tasters and tea roasters. With high-quality tea as its mainstay,
+            CHICHA San Chen (吃茶三千) marries the best of bubble tea with
+            traditional tea bringing one of life’s greatest pleasures to the
+            world."
           </p>
         </div>
         <div class="modal-footer">
-          <a class="overview-button">Overview</a>
-          <a class="team-button" style="color: #808836">
-            What my colleague say about me
-          </a>
+          <div class="footer-content">
+            <a
+              class="overview-button"
+              data-target="chicha-overview-content"
+              style="--link-color: #808836; color: var(--link-color)"
+              >Overview</a
+            >
+            <a
+              class="company-button"
+              data-target="chicha-company-content"
+              style="--link-color: black; color: var(--link-color)"
+            >
+              About the company
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -380,39 +411,79 @@
           </span>
           <h1>Front Store Ambassador</h1>
           <p class="date">Duration: 2 years 5 months (Feb 2022 - Present)</p>
-          <p><strong>2000+</strong> dedicated hours</p>
-          <p>Top skills gained:</p>
+          <p><strong>2500+</strong> dedicated hours</p>
         </div>
-        <div class="modal-main-content">
-          <h2>My role</h2>
+        <div class="modal-main-content" id="shoppers-overview-content">
+          <h2>
+            <span style="color: #d62025">High</span>lights
+          </h2>
           <ul>
+            <li>Technology used: POS, PDT, and MMS Systems</li>
             <li>
-              Collaborated with another co-mentor to help 2 first-year CS
-              students adapt to university life.
+              Skills gained: Quick calculation, Efficiency in processing the
+              customer order, Attention to detail, Interpersonal & Intercultural
+              Communication, Ability to work under pressure, Patience, Knowledge
+              of the products
             </li>
           </ul>
-
-          <h2>About the mentorship program</h2>
-          <a
-            href="https://www.sfu.ca/computing/wics/mentorship-program.html"
-            class="program-link"
-            >Program Website</a
-          >
+          <h2><span style="color: #63b5e6">My</span> responsibilities</h2>
+          <ul>
+            <li>
+              Support Front Store Manager/Assistant Front Store Manager in
+              maintaining the quality and standards
+            </li>
+            <li>Control cash, lottery, and stamp inventory</li>
+            <li>
+              Expert in assigned areas of product inventory, product placement
+              and expiry dates
+            </li>
+            <li>
+              Organize backroom product and follow Backroom Inventory Management
+              (BIMI) processes
+            </li>
+            <li>
+              Ensure product displays are consumer focused and “shoppable”
+            </li>
+            <li>
+              Provide excellent customer service and positively engage with all
+              customers
+            </li>
+          </ul>
+        </div>
+        <div class="modal-main-content" id="shoppers-company-content">
+          <h2>About the Company</h2>
           <p>
-            "Undergrad mentees will be grouped with 2-3 fellow mentees and
-            guided by 2 mentors. For grad mentees, you will be paired up 1:1
-            with a mentor. You will get the chance to receive academic/career
-            guidance, tips about SFU, and meet other students! The program will
-            spread across the Fall 2023 and Spring 2024 semesters. The program
-            is hybrid and runs for 2 semesters starting from the Fall term and
-            ending in the Spring term."
+            "Shoppers Drug Mart Inc (Shoppers), a subsidiary of Loblaw Companies
+            Ltd, is an operator and licensor of full-service retail drug stores.
+            The company offers medical clinic pharmacies, luxury beauty
+            destinations and conducts the sales and service of assisted-living
+            devices, home-care products, medical equipment, and mobility
+            equipment to institutional and retail customers. Shoppers through
+            its stores offers branded drugs, over-the-counter medications,
+            health and beauty aids, cosmetics, seasonal products and household
+            essentials. Its retail formats include Shoppers Simply Pharmacy
+            stores and Shoppers Drug Mart. Shoppers also provide various
+            specialty services under the banners Wellwise, PC Health, Medical
+            Cannabis, Shoppers Home Health Care, Specialty Health Network and
+            MediSystem Pharmacy. It also offers private label brands."
           </p>
         </div>
         <div class="modal-footer">
-          <a class="overview-button">Overview</a>
-          <a class="team-button" style="color: #808836">
-            What my colleague say about me
-          </a>
+          <div class="footer-content">
+            <a
+              class="overview-button"
+              data-target="shoppers-overview-content" 
+              style="--link-color: #d62025; color: var(--link-color)"
+              >Overview</a
+            >
+            <a
+              class="company-button"
+              data-target="shoppers-company-content"
+              style="--link-color: #63b5e6; color: var(--link-color)"
+            >
+              About the company
+            </a>
+          </div>
         </div>
       </div>
     </div>
