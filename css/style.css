@@ -206,7 +206,13 @@ header {
   color: var(--color-dark);
   text-align: center;
   margin-top: 30px;
-  /* height: 100vh; */
+  height: 100vh;
+}
+.service {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 40px;
 }
 .section__title--services::after {
   content: '';
@@ -499,7 +505,7 @@ body.modal-open {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 20px;
-  padding: 20px;
+  /* padding: 20px; */
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -508,19 +514,18 @@ body.modal-open {
   /* background-color: #4a3522; */
   border-radius: 10px;
   max-height: 500px;
+  box-sizing: border-box;
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
   /* text-align: center; */
 }
 
 .grid-item.item1 {
-  padding: 20px;
+  padding: 30px;
   grid-column: span 4;
   grid-row: span 1;
-  /* background-color: #f5d94d; */
   background-color: var(--color-yellow);
   color: #3a2718;
-  /* font-weight: bold; */
-  /* font-size: 2rem; */
+  overflow: scroll;
 }
 
 .grid-item.item2 {
@@ -547,7 +552,7 @@ body.modal-open {
 }
 
 .grid-item.item4 {
-  padding: 20px;
+  padding: 0px;
   grid-column: span 2;
   grid-row: span 1;
   background-color: none;
@@ -567,7 +572,7 @@ body.modal-open {
 }
 
 .grid-item.item5 {
-  padding: 20px;
+  padding: 30px;
   grid-column: span 2;
   grid-row: span 1;
   background-color: #4a3522;
