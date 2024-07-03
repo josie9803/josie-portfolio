@@ -1,7 +1,8 @@
 //for swiperjs
 let slideChangeCount = 0;
 const swiper = new Swiper('.mySwiper', {
-  slidesPerView: 4,
+
+  // slidesPerView: 4,
   direction: 'horizontal',
   loop: false,
   grabCursor: true,
@@ -16,8 +17,25 @@ const swiper = new Swiper('.mySwiper', {
     prevEl: '.swiper-button-prev',
   },
 
+  breakpoints: {
+    200: {
+      slidesPerView: 1,
+      spaceBetween: 10,   
+    },
+  
+    800: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+  
+    1000: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+
   speed: 500,
-  spaceBetween: 20,
+
 
   //no need
   // on: {      
