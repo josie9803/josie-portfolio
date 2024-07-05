@@ -320,6 +320,11 @@ header {
   max-width: 1200px;
   overflow: hidden;
   margin: auto;
+  position: relative;
+  padding-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .job-carousel-item {
@@ -329,11 +334,12 @@ header {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
+  width: 100%;
 }
 
-.job-carousel-item.active {
+/* .job-carousel-item.active {
   padding-bottom: 40px;
-}
+} */
 
 .job-header {
   border-bottom: 1px solid #ddd;
@@ -414,6 +420,35 @@ header {
     justify-content: center;
     align-items: center;
   }
+}
+.work-carousel {
+  z-index: 2;
+  position: absolute;
+  background-color: darkgoldenrod;
+  /* margin-top: 7.5em;
+  left: 0; */
+  transform: translateY(7.5em);
+  left: 0;
+}
+.org-carousel {
+  position: relative;
+  z-index: 1;
+  width: 95%;
+  transform: translateY(0); 
+  left: 0;
+}
+.job-carousel-item.highlighted {
+  z-index: 2; /* Bring to front when highlighted */
+  transform: translateY(0); /* Move to the top */
+  width: 100%; /* Full width when highlighted */
+  transition: transform 0.5s ease, z-index 0s, width 0.5s ease; /* Smooth transition for transform and width */
+}
+
+.job-carousel-item:not(.highlighted) {
+  z-index: 1; /* Send to back when not highlighted */
+  transform: translateY(7.5em); /* Move down */
+  width: 95%; /* Reduce width when not highlighted */
+  transition: transform 0.5s ease, z-index 0s 0.5s, width 0.5s ease; /* Smooth transition with delay for z-index */
 }
 
 /* for swiper */

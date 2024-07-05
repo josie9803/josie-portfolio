@@ -128,6 +128,26 @@ window.addEventListener('click', function(event) {
     }, 700);
   }
 
+  //for changing work/org exp effect
+  document.addEventListener('DOMContentLoaded', () => {
+    const workCarousel = document.querySelector('.work-carousel');
+    const orgCarousel = document.querySelector('.org-carousel');
+  
+    if (workCarousel && orgCarousel) {
+      orgCarousel.addEventListener('click', () => {
+        workCarousel.classList.remove('highlighted');
+        orgCarousel.classList.add('highlighted');
+      });
+  
+      workCarousel.addEventListener('click', () => {
+        orgCarousel.classList.remove('highlighted');
+        workCarousel.classList.add('highlighted');
+      });
+    }
+  });
+  
+  
+
 
 
     
