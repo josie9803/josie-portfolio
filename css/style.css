@@ -214,6 +214,7 @@ header {
   color: var(--color-dark);
   text-align: center;
   margin-top: 30px;
+  height: 100vh;
 }
 .service {
   background: white;
@@ -321,14 +322,13 @@ header {
   overflow: hidden;
   margin: auto;
   position: relative;
-  padding-bottom: 10rem;
+  /* padding-bottom: 10rem; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .job-carousel-item {
-  background: var(--color-green);
   margin: 20px 0;
   padding: 20px;
   border-radius: 10px;
@@ -336,10 +336,6 @@ header {
   position: relative;
   width: 100%;
 }
-
-/* .job-carousel-item.active {
-  padding-bottom: 40px;
-} */
 
 .job-header {
   border-bottom: 1px solid #ddd;
@@ -355,11 +351,9 @@ header {
 
 .job-cards {
   display: flex;
-  /* gap: 20px; */
   justify-content: space-between;
   margin-left: 0;
   overflow-x: auto;
-  /* width: 100%; */
 }
 
 .job-card {
@@ -374,10 +368,6 @@ header {
   width: 100%;
   /* transition: transform 0.3s ease; */
 }
-
-/* .job-card:hover {
-  transform: scale(1.05);
-} */
 
 .job-card h3 {
   margin-bottom: 10px;
@@ -424,38 +414,41 @@ header {
 .work-carousel {
   z-index: 2;
   position: absolute;
-  background-color: darkgoldenrod;
-  /* margin-top: 7.5em;
-  left: 0; */
-  transform: translateY(7.5em);
-  left: 0;
+  width: 100%;
+  transform: translateY(0);
+  background: var(--color-yellow);
 }
 .org-carousel {
   position: relative;
   z-index: 1;
-  width: 95%;
-  transform: translateY(0); 
-  left: 0;
+  width: 93%;
+  transform: translateY(0);
+  background: var(--color-green);
 }
 .job-carousel-item.highlighted {
-  z-index: 2; /* Bring to front when highlighted */
-  transform: translateY(0); /* Move to the top */
-  width: 100%; /* Full width when highlighted */
-  transition: transform 0.5s ease, z-index 0s, width 0.5s ease; /* Smooth transition for transform and width */
+  z-index: 2; 
+  transform: translateY(0);
+  width: 100%;
+  margin-top: 5.5em; 
+  transition: transform 1s ease, z-index 0s, width 0.4s ease-in; 
 }
 
 .job-carousel-item:not(.highlighted) {
-  z-index: 1; /* Send to back when not highlighted */
-  transform: translateY(7.5em); /* Move down */
-  width: 95%; /* Reduce width when not highlighted */
-  transition: transform 0.5s ease, z-index 0s 0.5s, width 0.5s ease; /* Smooth transition with delay for z-index */
+  margin-bottom: 7.5em;
+  z-index: 1; 
+  transform: translateY(0); 
+  width: 93%; 
+  transition: transform 1s ease, z-index 0s, width 0.4s ease-in; 
+  background-color: rgba(200, 207, 160, 0.5);
+  opacity: 40%;
+  cursor: pointer;
 }
 
 /* for swiper */
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
-  z-index: 10;
+  /* z-index: 10; */
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -751,5 +744,88 @@ body.modal-open {
 
   .grid-item.item6 {
     font-size: 2rem;
+  }
+}
+
+/* footer */
+footer {
+  background-color: var(--color-dark);
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section ul {
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  background-color: var(--color-dark-green);
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.footer-section .social-links a:hover {
+  background-color: #1abc9c;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-dark-green);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    max-width: 500px;
   }
 }

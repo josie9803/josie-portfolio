@@ -132,6 +132,8 @@ window.addEventListener('click', function(event) {
   document.addEventListener('DOMContentLoaded', () => {
     const workCarousel = document.querySelector('.work-carousel');
     const orgCarousel = document.querySelector('.org-carousel');
+    workCarousel.classList.add('highlighted');
+    orgCarousel.classList.remove('highlighted');
   
     if (workCarousel && orgCarousel) {
       orgCarousel.addEventListener('click', () => {
