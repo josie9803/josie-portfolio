@@ -46,8 +46,8 @@
     <header>
       <nav class="nav">
         <div class="header-content">
-          <span class="circle first-circle"></span>
-          <span class="circle second-circle"></span>
+          <span class="logo-circle first-logo-circle"></span>
+          <span class="logo-circle second-logo-circle"></span>
           <span class="name">Josie Tran's Portfolio</span>
         </div>
 
@@ -68,6 +68,29 @@
         </ul>
       </nav>
     </header>
+
+    <!-- <div id="shadow"></div> -->
+
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
 
     <!-- Introduction -->
     <section class="intro" id="home">
@@ -348,11 +371,29 @@
             <a href="#"><i class="fa fa-instagram"></i></a>
           </div>
         </div>
-        <div class="footer-section contact">
+        <div class="footer-section contact rate-me-container">
           <h3>Did you like my Portfolio? Rate me!</h3>
-          <p><i class="fa fa-map-marker"></i> 123 Street, City, Country</p>
-          <p><i class="fa fa-phone"></i> +1 234 567 890</p>
-          <p><i class="fa fa-envelope"></i> info@example.com</p>
+          <form id="rateMeForm">
+            <div class="rating-slider">
+              <input type="range" min="1" max="10" value="5" id="ratingRange">
+              <div class="slider-values">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+              </div>
+            </div>
+            <p>Current Rating: <span id="currentRating">5</span></p>
+            <textarea name="feedback" id="feedback" rows="4" placeholder="Leave your feedback here..."></textarea>
+            <button class="submit-button" type="submit">Submit</button>
+          </form>
+          <div id="thanksMessage" class="hidden">Thank you for your rating!</div>
         </div>    
       </div>
       <div class="footer-bottom">

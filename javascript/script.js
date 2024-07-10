@@ -147,10 +147,70 @@ window.addEventListener('click', function(event) {
       });
     }
   });
+
+//for mouse pointer
+const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#808836", "#8b8f3e", "#969746", "#a19e4e", "#ada656", "#b8ad5e", 
+  "#c3b567", "#cfbd70", "#dac478", "#e5cc81", "#f1d48b", "#fcdc94"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
   
+});
+
+function animateCircles() {
   
-
-
-
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
     
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
 
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+
+// rating area
+document.getElementById('ratingRange').addEventListener('input', function() {
+  document.getElementById('currentRating').innerText = this.value;
+});
+
+document.getElementById('rateMeForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const rating = document.getElementById('ratingRange').value;
+  const feedback = document.getElementById('feedback').value;
+
+  if (rating) {
+    console.log('Rating:', rating);
+    console.log('Feedback:', feedback);
+
+    document.getElementById('rateMeForm').classList.add('hidden');
+    document.getElementById('thanksMessage').classList.remove('hidden');
+  } else {
+    alert('Please select a rating.');
+  }
+});
