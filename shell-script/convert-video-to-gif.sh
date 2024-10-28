@@ -1,3 +1,4 @@
+#Source: GitHub but I forgot where :'(
 #! /bin/sh
 
 # require ffmpeg and imagemagick installed

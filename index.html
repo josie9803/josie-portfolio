@@ -156,36 +156,34 @@
     <!-- Summary page -->
     <section class="about" id="about-me">
       <div class="grid-container">
-        <div class="grid-item item1">
-          <div class="education-title">
-            <h3 style="font-size: 2rem">Education</h3>
-          </div>
-          <div class="education-content">     
+        <div class="grid-item item1 flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <h3 style="font-size: 2rem">Education</h3>
+                  <p>
+                    <strong>Simon Fraser University: </strong> major in Computing
+                    Science (Jan 2022 - Present)
+                  </p>
+                  <p>
+                    <strong>Honour Roll & Award: </strong> Dean's Honour Roll (academic year 2023 - 2024), Honour Roll Award (Summer 2022)
+                  </p>
+            </div>
+            <div class="education-activities flip-card-back">
               <p>
-                <strong>Simon Fraser University: </strong> major in Computing
-                Science
-              </p>
-              <p>
-                <strong>Activities: </strong>
-                <a style="text-decoration: underline"
-                  href="https://www.sfu.ca/publicsquare/news-resources/reports/photovoice-2024/">SLC Photovoice project,</a>
-                  <a href="https://github.com/molaed/Red-Team-Repo">Surge Projects,</a> 
-                  <a href="https://github.com/josie9803/SystemsHack2024-dream-weaver-journal">ChaosHack 2024,</a>  
-                  <span>CS Peer Tutor, WiCS Mentor</span>
-              </p>
-              <!-- <p>
-                <strong>Favourite courses:</strong> Formal Methods, Object
+                <strong>My favourite courses :> :</strong> Formal Methods, Object
                 Oriented Design, User Interface Design, Discrete Mathematics,
                 Systems Programming
-              </p> -->
+              </p>
+            </div>
           </div>
+          
+              
         </div>
 
         <div class="grid-item item2">
           <img src="./img/me.jpg" alt="Profile" />
         </div>
         <div class="grid-item item3">
-          <!-- <img src="./img/sea-pic.jpg" alt="Sea" /> -->
             <video src="./videos/IMG_4419.MOV" class="video" loop muted></video>
         </div>
         <div class="grid-item item4">
@@ -199,7 +197,21 @@
           <p>Writing</p>
         </div>
         <div class="grid-item item6">
-          <h4>I learn how to learn. . .</h4>
+          <h3 style="font-size: 2rem">Activities</h3>
+          <ul>
+          <li>
+            <a style="text-decoration: underline"
+              href="https://www.sfu.ca/publicsquare/news-resources/reports/photovoice-2024/">SLC Photovoice Project</a>
+          <li>
+            <a href="https://github.com/molaed/Red-Team-Repo">Surge Projects</a> 
+          </li>    
+          <li>
+            <a href="https://github.com/josie9803/SystemsHack2024-dream-weaver-journal">ChaosHack 2024</a>  
+          </li>  
+          <li>Robot Assistant/Group Leader (SFU Rosie Lab workshop)</li>
+          <li>Undergraduate Mentor (SFU Women in Computing Science)</li>
+          <li>Computing Science Peer Tutor (Faculty of Applied Sciences)</li>
+        </ul>
         </div>
       </div>
     </section>
@@ -360,44 +372,43 @@
 
     <footer>
       <div class="footer-container">
-        <div class="footer-section social">
-          <h3>Connect with me</h3>
-          <div class="social-links">
-            <a href="https://www.linkedin.com/in/josietran03/"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/josie9803"><i class="fa fa-github"></i></a>
-            <a href="https://www.youtube.com/@phucgia8894"><i class="fa fa-youtube"></i></a>
-            <a href="https://www.instagram.com/gphuccc/"><i class="fa fa-instagram"></i></a>
+        <div class="footer-left">
+          <div class="footer-section social">
+            <h3>Connect with me</h3>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/josietran03/"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/josie9803"><i class="fa fa-github"></i></a>
+              <a href="https://www.youtube.com/@phucgia8894"><i class="fa fa-youtube"></i></a>
+              <a href="https://www.instagram.com/gphuccc/"><i class="fa fa-instagram"></i></a>
+            </div>
+          </div> 
+          <div class="footer-section cv-container">
+            <h3>View my resume</h3>
+            <iframe src="./files/updated-resume.pdf" class="cv-small" id="cvSmall"></iframe>
+            <iframe src="./files/updated-resume.pdf" class="cv-large" id="cvLarge"></iframe>
           </div>
         </div>
-        <div class="footer-section contact rate-me-container">
-          <h3>Did you like my Portfolio? Rate me!</h3>
-          <form id="rateMeForm">
-            <div class="rating-slider">
-              <input type="range" min="1" max="10" value="5" id="ratingRange">
-              <div class="slider-values">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-                <span>6</span>
-                <span>7</span>
-                <span>8</span>
-                <span>9</span>
-                <span>10</span>
-              </div>
+        
+        <div class="footer-right">
+          <div class="footer-section rate-me-container">
+            <p class="title">Did you like my Portfolio? Rate me!</p>
+            <p class="subtitle"></p>Use the slider to rate</p>
+            <img src="https://essykings.github.io/JavaScript/svg-emojis/Neutral.svg" class="emoji"></img>
+            <div class="rating">
+              <p id="message">&nbsp;</p>
             </div>
-            <p>Current Rating: <span id="currentRating">5</span></p>
-            <textarea name="feedback" id="feedback" rows="4" placeholder="Leave your feedback here..."></textarea>
-            <button class="submit-button" type="submit">Submit</button>
-          </form>
-          <div id="thanksMessage" class="hidden">Thank you for your rating!</div>
-        </div>    
+
+            <input id="slider" type="range" min="0" max="100" value="50" />
+
+            <!-- <div id="thanksMessage" class="hidden">Thank you for your rating!</div> -->
+          </div>  
+        </div>
+          
       </div>
       <div class="footer-bottom">
         <p>&copy; 2024 built by Josie Tran 😁</p>
       </div>
-    </footer>
+    </footer> 
 
     <!-- Modal windows -->
 
@@ -408,7 +419,7 @@
             <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
           </span>
           <h1>Sales Associate/ Barista</h1>
-          <p class="date">Duration: 1+ months (June 2024 - Present)</p>
+          <p class="date">Duration: 5+ months (June 2024 - Present)</p>
           <p>Status: In training</p>
         </div>
         <div class="modal-main-content" id="chicha-overview-content">
@@ -476,7 +487,7 @@
             <i class="fa-solid fa-xmark fa-xl" style="color: #ff6251"></i>
           </span>
           <h1>Front Store Ambassador</h1>
-          <p class="date">Duration: 2 years 6 months (Feb 2022 - Present)</p>
+          <p class="date">Duration: 2 years 9 months (Feb 2022 - Present)</p>
           <p><strong>2500+</strong> dedicated hours</p>
         </div>
         <div class="modal-main-content" id="shoppers-overview-content">
@@ -963,6 +974,12 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./javascript/script.js"></script>
+    <script src="./javascript/script.js" defer></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const slider = document.getElementById("slider");
+        console.log("Slider:", slider);
+      });
+    </script>
   </body>
 </html>

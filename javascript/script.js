@@ -193,28 +193,6 @@ function animateCircles() {
 
 animateCircles();
 
-// rating area
-document.getElementById('ratingRange').addEventListener('input', function() {
-  document.getElementById('currentRating').innerText = this.value;
-});
-
-document.getElementById('rateMeForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-
-  const rating = document.getElementById('ratingRange').value;
-  const feedback = document.getElementById('feedback').value;
-
-  if (rating) {
-    console.log('Rating:', rating);
-    console.log('Feedback:', feedback);
-
-    document.getElementById('rateMeForm').classList.add('hidden');
-    document.getElementById('thanksMessage').classList.remove('hidden');
-  } else {
-    alert('Please select a rating.');
-  }
-});
-
 //hovering video card
 const card = document.querySelector('.item3');
 const video = document.querySelector('.video');
@@ -227,45 +205,90 @@ card.addEventListener('mouseleave', () => {
   video.pause();
 })
 
-//toggle theme button
-// check for saved 'darkMode' in localStorage
-let darkMode = localStorage.getItem('darkMode'); 
+//display cv
+document.addEventListener("DOMContentLoaded", function () {
+  const cvSmall = document.getElementById("cvSmall");
+  const cvLarge = document.getElementById("cvLarge");
 
-const darkModeToggle = document.querySelector('#dark-mode-toggle');
+  cvSmall.addEventListener("mouseenter", function () {
+    cvLarge.classList.add("show");
+  });
 
-const enableDarkMode = () => {
-  // 1. Add the class to the body
-  document.body.classList.add('darkmode');
-  // 2. Update darkMode in localStorage
-  localStorage.setItem('darkMode', 'enabled');
-}
+  cvLarge.addEventListener("mouseenter", function () {
+    cvLarge.classList.add("show");
+  });
 
-const disableDarkMode = () => {
-  // 1. Remove the class from the body
-  document.body.classList.remove('darkmode');
-  // 2. Update darkMode in localStorage 
-  localStorage.setItem('darkMode', null);
-}
- 
-// If the user already visited and enabled darkMode
-// start things off with it on
-if (darkMode === 'enabled') {
-  enableDarkMode();
-}
+  cvSmall.addEventListener("mouseleave", function () {
+    setTimeout(() => {
+      if (!cvLarge.matches(":hover")) {
+        cvLarge.classList.remove("show");
+      }
+    }, 100);
+  });
 
-// When someone clicks the button
-darkModeToggle.addEventListener('click', () => {
-  // get their darkMode setting
-  darkMode = localStorage.getItem('darkMode'); 
+  cvLarge.addEventListener("mouseleave", function () {
+    cvLarge.classList.remove("show");
+  });
+});
+
+
+//rating
+window.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector(".rate-me-container");
+  const slider = document.getElementById("slider");
+  const emoji = document.querySelector(".emoji");
+  const rate = document.getElementById("message");
   
-  // if it not current enabled, enable it
-  if (darkMode !== 'enabled') {
-    enableDarkMode();
-  // if it has been enabled, turn it off  
-  } else {  
-    disableDarkMode(); 
+  if(slider){
+    const colors = ["#d35e65", "#d3965c", "#cad48a", "#6ed494", "#18c574"];
+    const emojis = [
+    {
+      text: "Awful",
+      url: "https://assets.codepen.io/210284/Disappointed.svg"
+    },
+  {
+      text: "Bad",
+      url: "https://assets.codepen.io/210284/Sad.svg"
+    },
+    {
+      text: "Okay",
+      url: "https://assets.codepen.io/210284/Expressionless.svg"
+    },
+    {
+      text: "Good",
+      url: "https://assets.codepen.io/210284/Smile.svg"
+    },
+    {
+      text: "Great",
+      url: "https://assets.codepen.io/210284/Falling_in_love.svg"
+    }]
+
+    function setProperties(index) {
+      emoji.src = emojis[index].url;
+      rate.textContent = emojis[index].text;
+      container.style.backgroundColor = colors[index];
+    }
+
+    slider.addEventListener("input", UpdateRating);
+
+    function UpdateRating() {
+      const value = slider.value;
+
+      if (value >= 0 && value < 20) {
+        setProperties(0);
+      } else if (value >= 20 && value < 40) {
+        setProperties(1);
+      } else if (value >= 40 && value < 60) {
+        setProperties(2);
+      } else if (value >= 60 && value < 80) {
+        setProperties(3);
+      } else if (value >= 80 && value <= 100) {
+        setProperties(4);
+      }
+    }
   }
 });
+
 
 
 
